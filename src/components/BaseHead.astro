@@ -1,96 +1,57 @@
 ---
 import "../styles/global.css";
-import { AstroSeo } from "@astrolib/seo";
 ---
-
-<AstroSeo
-  title="Your Page Title"
-  description="A detailed description of your page content."
-  canonical="https://yoursite.com/current-page"
-  openGraph={{
-    url: "https://yoursite.com/current-page",
-    title: "Your Page Title",
-    description: "A detailed description of your page content.",
-    images: [
-      {
-        url: "https://yoursite.com/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Open Graph Image Alt",
-        type: "image/jpeg",
-      },
-    ],
-    site_name: "Your Site Name",
-    type: "website",
-    locale: "en_US",
-  }}
-  twitter={{
-    handle: "@yourhandle",
-    site: "@yoursite",
-    cardType: "summary_large_image",
-  }}
-/>
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <!-- Basic Meta Tags -->
-<title>Your Website Title</title>
+<title>AFDev - Web & Mobile Development</title>
 <meta
   name="description"
-  content="A brief description of your website content."
+  content="AFDev builds websites and mobile apps tailored to your needs. Get AI-assisted design or bring your own, with personalized quotation through WhatsApp consultation."
 />
-<meta name="keywords" content="keyword1, keyword2, keyword3" />
-<meta name="author" content="Your Name or Company Name" />
+<meta
+  name="keywords"
+  content="web development, mobile apps, Flutter, website maintenance, freelance developer, Malaysia"
+/>
+<meta name="author" content="Amer Fathullah" />
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://dev.amerfathullah.com/" />
 
 <!-- Favicons -->
 <link rel="icon" href="/favicon.ico" sizes="any" />
-<link rel="icon" href="/icon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-<link rel="manifest" href="/manifest.webmanifest" />
+<link rel="manifest" href="/site.webmanifest" />
 
-<!-- Favicon for IE -->
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-
-<!-- Favicons for different sizes -->
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+<!-- Favicon for different sizes -->
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.yourwebsite.com/" />
-<meta property="og:title" content="Your Website Title" />
+<meta property="og:url" content="https://dev.amerfathullah.com/" />
+<meta property="og:title" content="AFDev - Web & Mobile Development" />
 <meta
   property="og:description"
-  content="A brief description of your website content."
-/>
-<meta
-  property="og:image"
-  content="https://www.yourwebsite.com/path/to/image.jpg"
+  content="AFDev builds websites and mobile apps tailored to your needs. Get AI-assisted design or bring your own, with personalized quotation through WhatsApp consultation."
 />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content="https://www.yourwebsite.com/" />
-<meta property="twitter:title" content="Your Website Title" />
+<meta property="twitter:url" content="https://dev.amerfathullah.com/" />
+<meta property="twitter:title" content="AFDev - Web & Mobile Development" />
 <meta
   property="twitter:description"
-  content="A brief description of your website content."
+  content="AFDev builds websites and mobile apps tailored to your needs. Get AI-assisted design or bring your own, with personalized quotation through WhatsApp consultation."
 />
-<meta
-  property="twitter:image"
-  content="https://www.yourwebsite.com/path/to/image.jpg"
-/>
-
-<!-- Canonical URL -->
-<link rel="canonical" href="https://www.yourwebsite.com/" />
 
 <!-- Additional SEO -->
 <meta name="robots" content="index, follow" />
 <meta name="googlebot" content="index, follow" />
 
-<!-- Apple Touch Icon (already included in favicons, but keeping for backwards compatibility) -->
+<!-- Apple Touch Icon -->
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
 <!-- Theme Color for Mobile Browsers -->

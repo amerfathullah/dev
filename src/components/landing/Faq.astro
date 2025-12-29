@@ -1,54 +1,56 @@
 ---
 const faqs = [
   {
-    question: "Who runs the studio?",
+    question: "Who runs AFDev?",
     answer:
-      "My name is Michael Andreuzza, UI Designer and Front-end Developer. I also build products for myself. Learn more at michaelandreuzza.com.",
+      "My name is Amer Fathullah, a Full-Stack Developer. I build websites, mobile apps, and help maintain existing projects. Learn more at amerfathullah.com.",
   },
   {
-    question: "How do we communicate and manage the project?",
+    question: "How does the consultation process work?",
     answer:
-      "Minimal uses Breeew for project management, ensuring seamless communication and collaboration.",
+      "Simply reach out via WhatsApp with your project idea. We'll discuss your requirements, timeline, and goals. Based on our conversation, I'll provide a personalized quotation.",
   },
   {
-    question: "How quickly will I get some work done?",
+    question: "What design options are available?",
     answer:
-      "Expect the initial concept within 2–3 days. For larger projects, timelines may extend up to 4 weeks. Revisions are unlimited until you're satisfied.",
+      "You have flexibility here! I can create designs using AI-assisted tools, implement your existing design files, or work with designs from your own designer. Just bring your vision.",
   },
   {
-    question: "Why do you only have two spots?",
+    question: "Do you develop mobile apps?",
     answer:
-      "To ensure high-quality results and focused attention, minimal only takes on two projects at a time. This allows for timely and dedicated work.",
+      "Yes! I build cross-platform mobile apps using Flutter, covering both iOS and Android with a single codebase. This includes App Store and Play Store deployment.",
   },
   {
-    question: "What if I don’t like the design?",
+    question: "What do you need for maintenance work?",
     answer:
-      "Your satisfaction is the priority. That’s why minimal offers unlimited design requests and revisions.",
+      "For maintenance of existing websites or mobile apps, I'll need access to the source code. This allows me to understand the current setup and make updates, bug fixes, or add new features.",
   },
   {
-    question: "Are there any refunds?",
+    question: "How quickly can you complete a project?",
     answer:
-      "Due to the creative effort and research required, refunds aren't offered once work begins. However, if no work has started and the fit isn’t right after our initial discussion, you're eligible for a 100% refund.",
+      "Timelines depend on project complexity. Simple websites can be done in 1-2 weeks, while larger projects may take 4-8 weeks. We'll discuss realistic timelines during our consultation.",
   },
 ];
 ---
 
 <section>
-  <div class="px-8 py-12 max-w-xl mx-auto">
-    <h2 class="text-4xl tracking-tight text-base-900 text-balance font-medium">
+  <div class="px-8 py-6 max-w-4xl mx-auto">
+    <h2
+      class="text-4xl tracking-tight text-base-900 text-balance font-medium text-center"
+    >
       The answers to the most <span class="block"
         >popular frequent questions</span
       >
     </h2>
-    <p class="mt-2 text-sm text-base-600">
-      Can't find your answer? Send an
+    <p class="mt-2 text-sm text-base-600 text-center">
+      Can't find your answer? Reach out via
       <a
-        class="text-blue-500 hover:text-base-900 duration-200"
-        href="mailto:michael@andreuzza.com"
+        class="text-green-600 underline hover:text-base-900 duration-200"
+        href="https://wa.me/601154229874"
       >
-        email
+        WhatsApp
       </a>
-      and minimal will get back to you.
+      and AFDev will get back to you.
     </p>
 
     <div
@@ -72,7 +74,7 @@ const faqs = [
                 />
               </svg>
             </summary>
-            <p class="mt-2 text-xs text-base-600">{faq.answer}</p>
+            <p class="mt-2 text-sm text-base-600">{faq.answer}</p>
           </details>
         ))
       }

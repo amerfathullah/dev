@@ -1,203 +1,92 @@
----
-import FigmaLogo from "@/components/assets/FigmaLogo.astro";
-import AstroLogo from "@/components/assets/AstroLogo.astro";
-import StripeLogo from "@/components/assets/StripeLogo.astro";
-import TailwindLogo from "@/components/assets/TailwindLogo.astro";
-import OrchestraLogo from "@/components/assets/OrchestraLogo.astro";
-
-const pricingTiers = [
-  {
-    title: "Design + Dev",
-    price: "$1999",
-    note: "/monthly",
-    subnote: "USD + Local tax",
-    description:
-      "Ideal for startups requiring design and front-end development services.",
-    highlight: "Same as in Design plus:",
-    features: [
-      "Astro & Tailwind Code",
-      "Clean & accessible code",
-      "Essential SEO",
-      "Support & maintenance",
-    ],
-  },
-  {
-    title: "Design",
-    price: "$1499",
-    note: "/monthly",
-    subnote: "USD + Local tax",
-    description:
-      "Ideal for emerging businesses requiring continuous design assistance.",
-    highlight: "What you get:",
-    features: [
-      "Design in Figma",
-      "1 request at the time",
-      "Unlimited feedback",
-      "Delivery within 2–3 days",
-    ],
-  },
-  {
-    title: "One off",
-    price: "$999",
-    note: "",
-    subnote: "USD + Local tax",
-    description:
-      "For anyone who only needs a quick landing page or just a quick redesign!",
-    highlight: "What you get:",
-    features: [
-      "2–3 days turnaround time",
-      "Design or development",
-      "1 revision included",
-    ],
-  },
-];
----
-
 <section class="scroll-mt-4" id="pricing">
-  <div class="px-8 md:px-12 py-12 max-w-7xl mx-auto">
-    <div
-      class="grid grid-cols-1 gap-px md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
-    >
+  <div class="px-8 py-6 max-w-4xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
       <section
-        class="col-span-full lg:col-span-1 bg-white flex flex-col justify-between rounded-3xl h-full text-base-900 p-8"
+        class="col-span-full md:col-span-1 bg-white flex flex-col justify-between rounded-3xl h-full text-base-900 p-8"
       >
         <div>
-          <div class="flex gap-2">
-            <FigmaLogo class="h-4 text-base-900" />
-            <AstroLogo class="h-4 text-base-900" />
-            <TailwindLogo class="h-3 text-base-900" />
-          </div>
           <p class="text-2xl tracking-tight font-medium text-base-900 mt-4">
-            Tailored design & <span class="md:block">dev packages</span>
+            Project-based <span class="md:block">quotations</span>
           </p>
-          <p class="text-xs text-base-500 mt-2">
-            Flexible pricing to enhance your online presence at every stage.
+          <p class="text-sm text-base-500 mt-2">
+            Every project is unique. Get a personalized quote based on your
+            specific requirements.
           </p>
         </div>
         <div>
-          <div class="flex items-center gap-2 text-base-900">
-            <p class="text-xs">1 spots available</p>
-            <div class="h-2 w-2 rounded-full bg-black"></div>
-            <div class="h-2 w-2 rounded-full border border-black"></div>
-          </div>
           <div class="border-t border-base-200 flex flex-col pt-2 mt-2">
-            <span class="text-xs text-base-600 font-normal">
-              Project management with <span
-                class="italic text-base-900 font-medium">Orchestra</span
-              >, secure payments with <span
-                class="italic text-base-900 font-medium">Stripe</span
-              > and the freedom of
-              <span class="italic text-base-900 font-medium">
-                Canceling your subscription anytime:</span
-              >
+            <span class="text-sm text-base-600 font-normal">
+              <span class="italic text-base-900 font-medium"
+                >Free consultation</span
+              > to understand your needs and provide an accurate quotation.
             </span>
-            <div class="inline-flex items-center gap-2 mt-4 text-base-900">
-              <OrchestraLogo class="h-4 text-base-900" />
-              <span aria-hidden="true" class="text-base-900 pointer-events-none"
-                >/</span
-              >
-              <StripeLogo class="h-4 text-base-900" />
-            </div>
           </div>
         </div>
       </section>
 
-      {
-        pricingTiers.map((tier) => (
-          <section class="bg-white flex flex-col justify-between rounded-3xl h-full text-base-900 p-8">
-            <div>
-              <div class="flex flex-col gap-2">
-                <h3 class="text-lg text-base-900">{tier.title}</h3>
-                <p class="text-xl font-medium text-base-900 mt-2">
-                  {tier.price}
-                  {tier.note && (
-                    <span class="text-sm text-base-500">{tier.note}</span>
-                  )}
-                  <span class="text-base-900 block text-xs">
-                    {tier.subnote}
-                  </span>
-                </p>
-              </div>
-              <p class="text-xs text-base-600 mt-4">{tier.description}</p>
-
-              <div class="mt-6">
-                <p class="text-xs uppercase text-base-900">{tier.highlight}</p>
-                <ul
-                  class="flex flex-col mt-2 text-sm text-base-600 gap-y-1 list-disc pl-4"
-                  role="list"
-                >
-                  {tier.features.map((feature) => (
-                    <li>
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            <div class="mt-8">
-              <button class="rounded-full px-4 border py-2 text-sm font-semibold transition-all flex items-center justify-between bg-white text-base-900 h-10 border-base-200 focus:ring-2 shadow-base-500/5 focus:ring-blue-950 focus:ring-offset-2 ring-offset-base-200 hover:bg-black hover:text-white duration-300 w-full">
-                Get started <span>&rarr;</span>
-              </button>
-            </div>
-          </section>
-        ))
-      }
-
       <section
-        class="h-full p-8 flex flex-col col-span-full md:col-span-1 xl:col-span-2 justify-between order-last md:order-none bg-white rounded-3xl"
+        class="h-full p-8 flex flex-col col-span-full md:col-span-1 justify-between bg-white rounded-3xl"
       >
-        <p class="text-lg text-base-900 lg:text-xl">Good to know</p>
-        <div class="mt-4">
-          <p class="text-xs text-base-500 font-normal">
-            Microstudio focuses exclusively on design and front-end development.
-            The following services are not included:
-            <span class="text-base-900 italic font-medium">design systems</span
-            >,
-            <span class="text-base-900 italic font-medium">3D</span>,
-            <span class="text-base-900 italic font-medium">prototypes</span>,
-            <span class="text-base-900 italic font-medium">mobile apps</span>,
-            <span class="text-base-900 italic font-medium">illustrations</span>,
-            <span class="text-base-900 italic font-medium">CMS setups</span>,
-            <span class="text-base-900 italic font-medium">back-end work</span>,
-            <span class="text-base-900 italic font-medium">hosting</span>,
-            <span class="text-base-900 italic font-medium">marketing</span>,
-            <span class="text-base-900 italic font-medium">copywriting</span>,
-            <span class="text-base-900 italic font-medium">animations</span>,
-            and
-            <span class="text-base-900 italic font-medium"
-              >overly complex builds</span
-            >.
-          </p>
-
-          <div class="border-t border-base-200 flex flex-col pt-4 mt-4">
-            <p class="text-xs text-base-400">
-              Minimal supports English, Spanish, Italian, and Swedish. Pick
-              what’s comfortable!
-            </p>
+        <div>
+          <p class="text-lg text-base-900 lg:text-xl">How to get started</p>
+          <div class="mt-4 space-y-3">
+            <div class="flex items-start gap-3">
+              <span class="text-base-900 font-medium">1.</span>
+              <p class="text-sm text-base-500">
+                Reach out via WhatsApp with your project idea
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-base-900 font-medium">2.</span>
+              <p class="text-sm text-base-500">
+                Discuss your requirements and timeline
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-base-900 font-medium">3.</span>
+              <p class="text-sm text-base-500">
+                Receive a customized quotation
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-base-900 font-medium">4.</span>
+              <p class="text-sm text-base-500">Approve and start building!</p>
+            </div>
           </div>
+        </div>
+        <div class="border-t border-base-200 pt-4 mt-4">
+          <p class="text-sm text-base-400">
+            AFDev supports English and Malay. Pick what's comfortable!
+          </p>
         </div>
       </section>
 
       <section
-        class="h-full rounded-3xl justify-between col-span-full lg:col-span-1 xl:col-span-2 bg-white p-8"
+        class="h-full rounded-3xl justify-between col-span-full md:col-span-1 bg-white p-8"
       >
         <div class="flex flex-col justify-between h-full">
-          <h3 class="text-lg text-base-900 lg:text-xl">Book an intro call</h3>
-          <p class="text-xs text-base-500 mt-4 text-balance">
-            Not sure if it’s the right fit? Let’s talk. Book a quick intro call
-            and get a feel for how Minimal works.
+          <h3 class="text-lg text-base-900 lg:text-xl">Let's talk</h3>
+          <p class="text-sm text-base-500 mt-4 text-balance">
+            Have a project in mind? Reach out and let's discuss how AFDev can
+            help bring your idea to life.
           </p>
 
-          <a
-            href="#_"
-            class="text-sm text-base-900 hover:text-blue-500 mt-4 font-medium"
-          >
-            Book a call
-          </a>
+          <div class="flex flex-col gap-2 mt-4">
+            <a
+              href="https://wa.me/601154229874"
+              class="text-sm text-base-900 hover:text-green-600 font-medium inline-flex items-center gap-2"
+            >
+              <svg class="size-4" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                ></path>
+              </svg>
+              WhatsApp
+            </a>
+          </div>
 
           <div class="border-t border-base-200 pt-4 mt-4">
-            <p class="text-xs text-base-400">(Europe/Helsinki) Time</p>
+            <p class="text-sm text-base-400">(Asia/Kuala_Lumpur) Time</p>
           </div>
         </div>
       </section>

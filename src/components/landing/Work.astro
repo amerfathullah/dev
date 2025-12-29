@@ -85,13 +85,19 @@ const themes = [
 </style>
 
 <section class="scroll-mt-24" id="work">
-  <div class="px-8 py-24 max-w-xl mx-auto">
-    <div class="bg-white p-8  rounded-3xl">
+  <div class="px-8 py-8 max-w-4xl mx-auto text-center">
+    <div class="bg-white p-8 rounded-3xl max-w-4xl mx-auto">
       <div id="keen-slider" class="keen-slider relative">
         {
-          themes.map(({ name, image }) => (
+          themes.map(({ name, image }, index) => (
             <div class="relative w-full keen-slider__slide  ">
-              <Image src={image} width={800} height={800} alt={name} />
+              <Image
+                src={image}
+                width={800}
+                height={800}
+                alt={name}
+                loading="eager"
+              />
             </div>
           ))
         }
@@ -197,10 +203,10 @@ const themes = [
             },
           },
         },
-        [autoplay]
+        [autoplay],
       );
       const keenSliderPrevious = document.getElementById(
-        "keen-slider-previous"
+        "keen-slider-previous",
       );
       const keenSliderNext = document.getElementById("keen-slider-next");
       keenSliderPrevious?.addEventListener("click", () => keenSlider.prev());

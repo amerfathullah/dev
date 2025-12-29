@@ -69,12 +69,42 @@ import "../styles/global.css";
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+
+<!-- Async load Google Fonts -->
+<link
+  rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+/>
 <link
   href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
   rel="stylesheet"
+  media="print"
+  onload="this.media='all'"
 />
-<!--- Keen Slider -->
+<noscript>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+    rel="stylesheet"
+  />
+</noscript>
+
+<!-- Async load Keen Slider CSS -->
+<link
+  rel="preload"
+  as="style"
+  href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css"
+/>
 <link
   href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css"
   rel="stylesheet"
+  media="print"
+  onload="this.media='all'"
 />
+<noscript>
+  <link
+    href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css"
+    rel="stylesheet"
+  />
+</noscript>
